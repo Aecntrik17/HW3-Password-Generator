@@ -10,8 +10,11 @@ var userChoice = ""
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+    var passwordText = document.querySelector("#password");
+    // resets password when butten is clicked
+    passwordText.value = '';
+    
+    var password = generatePassword();
    
   passwordText.value = password;
 
