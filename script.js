@@ -39,4 +39,10 @@ function generatePassword(){
     if (upperCase === true){
         userChoice = userChoice + capLetter;
     }
+     // creating variable for special characters in the password selection criteria
+    var specialEl = confirm("Use $pecia! Ch@racters?")
+    // instructing code to include array of special characters into the selection criteria if user chooses
+    if (specialEl === true){
+        userChoice = userChoice + special;
+    }
 }
