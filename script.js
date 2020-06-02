@@ -45,4 +45,6 @@ function generatePassword(){
     if (specialEl === true){
         userChoice = userChoice + special;
     }
+
+    var pswdLength = prompt("Password length? Must be between 8 and 128.")
 }
