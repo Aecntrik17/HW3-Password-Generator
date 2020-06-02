@@ -29,8 +29,14 @@ function generatePassword(){
     }
     // creating variable for lower case alpha in the password selection criteria
     var lowerCase = confirm ("use lower case letters?")
-    // instructing code to include array of lower case letters into the selection criteria
+    // instructing code to include array of lower case letters into the selection criteria if user chooses
     if (lowerCase === true){
         userChoice = userChoice + lowerLetter;
+    }
+    // creating variable for upper case alpha in the password selection criteria
+    var upperCase = confirm("USE UPPER CASE LETTERS?")
+    // instructing code to include array of upper case letters into the selection criteria if user chooses
+    if (upperCase === true){
+        userChoice = userChoice + capLetter;
     }
 }
