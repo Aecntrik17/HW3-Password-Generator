@@ -12,7 +12,7 @@ var userChoice = ""
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+   
   passwordText.value = password;
 
 }
@@ -20,12 +20,12 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-function generatePassword(){
+function generatePassword() {
     // creating variable for numbers selection
     var numeric = confirm ("Use Numbers?")
     // instructing code to include variable array numbers to be included in selection criteria for user choice
     if (numeric === true){
-      userChoice = userChoice + number;
+        userChoice = userChoice + number;
     }
     // creating variable for lower case alpha in the password selection criteria
     var lowerCase = confirm ("use lower case letters?")
@@ -34,13 +34,13 @@ function generatePassword(){
         userChoice = userChoice + lowerLetter;
     }
     // creating variable for upper case alpha in the password selection criteria
-    var upperCase = confirm("USE UPPER CASE LETTERS?")
+    var upperCase = confirm ("USE UPPER CASE LETTERS?")
     // instructing code to include array of upper case letters into the selection criteria if user chooses
     if (upperCase === true){
         userChoice = userChoice + capLetter;
     }
      // creating variable for special characters in the password selection criteria
-    var specialEl = confirm("Use $pecia! Ch@racters?")
+    var specialEl = confirm ("Use $pecia! Ch@racters?")
     // instructing code to include array of special characters into the selection criteria if user chooses
     if (specialEl === true){
         userChoice = userChoice + special;
@@ -53,9 +53,11 @@ function generatePassword(){
     var characters = userChoice;
     var charactersLength = characters.length;
     // looping the selection critera based on user input, and generating random selections
-    for (var i = 0; i <pswdLength; i++){
-        result += characters.charAt(Math.floor(math.random() * charactersLength));
+    for ( var i = 0; i < pswdLength; i++ ){
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
+
     // returns the result of the loop
     return result;
 }
+
