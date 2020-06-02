@@ -45,6 +45,17 @@ function generatePassword(){
     if (specialEl === true){
         userChoice = userChoice + special;
     }
-
+    // Creating variable for password length, value will be store with user responds to prompt 
     var pswdLength = prompt("Password length? Must be between 8 and 128.")
+
+    // creating variables for running code and accessing the selection criteria
+    var result = '';
+    var characters = userChoice;
+    var charactersLength = characters.length;
+    // looping the selection critera based on user input, and generating random selections
+    for (var i = 0; i <pswdLength; i++){
+        result += characters.charAt(Math.floor(math.random() * charactersLength));
+    }
+    // returns the result of the loop
+    return result;
 }
