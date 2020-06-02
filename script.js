@@ -21,5 +21,10 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword(){
-    
+    // creating variable for numbers selection
+    var numeric = confirm ("Use Numbers?")
+    // instructing code to run if numeric value is confirmed
+    if (numeric === true){
+      userChoice = userChoice + number;
+    }
 }
