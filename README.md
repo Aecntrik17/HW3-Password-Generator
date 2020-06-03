@@ -7,6 +7,5 @@ The user should have the option to apply upper case alpha, lower case alpha, num
 
 The user begins by clicking on an identified button and will then select each criteria option through confirms and finally the password length via a prompt. 
 
-finished project should reflect this..(https://user-images.githubusercontent.com/64560630/83587242-9b379580-a51c-11ea-80f9-9fbfbcd69ff4.png)
 
 No license needed. 
