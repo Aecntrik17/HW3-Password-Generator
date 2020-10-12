@@ -6,7 +6,7 @@ var number = "0123456789";
 var lowerLetter = "abcdefghijklmnopqrstuvwxyz";
 var capLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var special = "!@$%&#";
-var userChoice = ""
+
 
 // Write password to the #password input
 function writePassword() {
@@ -24,6 +24,8 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
+    // starting and setting the user choice to nothing so that each attempt to create a password starts fresh
+    var userChoice = ""
     // creating variable for numbers selection
     var numeric = confirm ("Use Numbers?")
     // instructing code to include variable array numbers to be included in selection criteria for user choice
@@ -50,6 +52,11 @@ function generatePassword() {
     }
     // Creating variable for password length, value will be store with user responds to prompt 
     var pswdLength = prompt("Password length? Must be between 8 and 128.")
+
+    if (pswdLength < 8 || pswdLength > 128 || !parseInt(pswdLength)){
+        alert ("password must be between 8 & 128 characters")
+        return ""
+    } 
 
     // creating variables for running code and accessing the selection criteria
     var result = '';
